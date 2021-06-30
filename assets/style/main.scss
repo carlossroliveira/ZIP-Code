@@ -5,24 +5,245 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
 
-    body {
-        font-size: 1.6rem; // Tamanho da fonte 16px
+@media(min-width: 1000px) {
+    html {
+        font-size: 62.5%;
+
+        body {
+            font-size: 1.6rem; // Tamanho da fonte 16px
+
+            section {
+                font-family: 'Marko One', serif;
+                position: relative;
+                min-height: 100vh;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #2EB99C;
+
+                .container {
+                    position: relative;
+                    min-width: 1000px;
+                    min-height: 450px;
+                    display: flex;
+                    z-index: 2;
+
+                    .contactinfo {
+                        position: absolute;
+                        z-index: 1;
+
+                        top: 40px;
+                        width: 350px;
+                        padding: 40px;
+                        height: calc(100% - 80px);
+                        background-color: #2EB99C;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 
 
+                        .containerCep {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: normal;
+
+                            /* ===== Button ============================== */
+                            input {
+                                margin: 1rem 0rem;
+                                padding: 5px;
+                                border: none;
+                                outline: none;
+                                font-weight: 900;
+                                color: black;
+                                border-radius: 5px;
+                                background: #2EB99C;
+                                background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+                                border: 1px solid #00FFCB;
+                            }
+
+                            input:hover {
+                                box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+                            }
+
+                            .button {
+                                font-family: 'Marko One', serif;
+                                font-size: 20px;
+                                text-transform: uppercase;
+                                letter-spacing: 1.3px;
+                                font-weight: 700;
+                                color: black;
+                                background: #2EB99C;
+                                background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+                                border: none;
+                                border-radius: 5px;
+                                box-shadow: 12px 12px 24px #4fd1c5a3;
+                                transition: all 0.3s ease-in-out 0s;
+                                cursor: pointer;
+                                outline: none;
+                                position: relative;
+                                padding: 10px;
+                                margin-top: 5rem;
+                            }
+
+                            button::before {
+                                content: '';
+                                border-radius: 15px;
+                                min-width: calc(270px + 12px);
+                                min-height: calc(50px + 12px);
+                                border: 6px solid #00FFCB;
+                                box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                opacity: 0;
+                                transition: all .3s ease-in-out 0s;
+                            }
+
+                            .button:hover,
+                            .button:focus {
+                                color: #313133;
+                                transform: translateY(-6px);
+                            }
+
+                            button:hover::before,
+                            button:focus::before {
+                                opacity: 1;
+                            }
+
+                            button::after {
+                                content: '';
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 100%;
+                                border: 6px solid #00FFCB;
+                                position: absolute;
+                                z-index: -1;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                animation: ring 1.5s infinite;
+                            }
+
+                            button:hover::after,
+                            button:focus::after {
+                                animation: none;
+                                display: none;
+                            }
+
+                            @keyframes ring {
+                                0% {
+                                    width: 30px;
+                                    height: 30px;
+                                    opacity: 1;
+                                }
+
+                                100% {
+                                    width: 150px;
+                                    height: 150px;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                        .containerIcon {
+                            ul {
+                                display: flex;
+                                list-style: none;
+                                justify-content: space-around;
+
+                                li>a {
+                                    display: flex;
+                                    flex-direction: row;
+                                    font-size: 5rem;
+                                    color: black;
+                                    text-decoration: none;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .contactForm {
+                        position: absolute;
+                        padding: 70px 50px;
+                        background-color: #EDC2C0;
+                        margin-left: 150px;
+                        padding-left: 250px;
+                        width: 840px;
+                        height: 100%;
+                        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+
+            section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: #474747;
+            }
+        }
     }
 }
 
-
-@media(max-width: 1080px) {
+@media(max-width: 1000px) {
     html {
         font-size: 93.75%;
 
         body {
             font-size: 1rem; // Tamanho da fonte 15px
 
+            section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #112d42;
+
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    min-height: 614px;
+                    z-index: 2;
+                    border: 3px solid tomato;
+
+                    .contactinfo {
+                        padding: 40px;
+                        background-color: #0f3959;
+
+                        h2 {
+                            color: white;
+                        }
+                    }
+
+                    .contactForm {
+                        background-color: #fff;
+                        padding: 40px;
+                        width: 600px;
+                        height: 100%;
+                        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+
+            section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: #03a9f4;
+            }
 
         }
     }

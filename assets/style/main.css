@@ -1,16 +1,294 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+@media (min-width: 1000px) {
+  html {
+    font-size: 62.5%;
+  }
+  html body {
+    font-size: 1.6rem;
+  }
+  html body section {
+    font-family: 'Marko One', serif;
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #2EB99C;
+  }
+  html body section .container {
+    position: relative;
+    min-width: 1000px;
+    min-height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+  }
+  html body section .container .contactinfo {
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    width: 350px;
+    padding: 40px;
+    height: calc(100% - 80px);
+    background-color: #2EB99C;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  }
+  html body section .container .contactinfo .containerCep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    /* ===== Button ============================== */
+  }
+  html body section .container .contactinfo .containerCep input {
+    margin: 1rem 0rem;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    color: black;
+    border-radius: 5px;
+    background: #2EB99C;
+    background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
+    background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+    border: 1px solid #00FFCB;
+  }
+  html body section .container .contactinfo .containerCep input:hover {
+    -webkit-box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+            box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  }
+  html body section .container .contactinfo .containerCep .button {
+    font-family: 'Marko One', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: black;
+    background: #2EB99C;
+    background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
+    background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 12px 12px 24px #4fd1c5a3;
+            box-shadow: 12px 12px 24px #4fd1c5a3;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    margin-top: 5rem;
+  }
+  html body section .container .contactinfo .containerCep button::before {
+    content: '';
+    border-radius: 15px;
+    min-width: calc(270px + 12px);
+    min-height: calc(50px + 12px);
+    border: 6px solid #00FFCB;
+    -webkit-box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+            box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  html body section .container .contactinfo .containerCep .button:hover,
+  html body section .container .contactinfo .containerCep .button:focus {
+    color: #313133;
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  html body section .container .contactinfo .containerCep button:hover::before,
+  html body section .container .contactinfo .containerCep button:focus::before {
+    opacity: 1;
+  }
+  html body section .container .contactinfo .containerCep button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation: ring 1.5s infinite;
+            animation: ring 1.5s infinite;
+  }
+  html body section .container .contactinfo .containerCep button:hover::after,
+  html body section .container .contactinfo .containerCep button:focus::after {
+    -webkit-animation: none;
+            animation: none;
+    display: none;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
+  html body section .container .contactinfo .containerIcon ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  html body section .container .contactinfo .containerIcon ul li > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 5rem;
+    color: black;
+    text-decoration: none;
+  }
+  html body section .container .contactForm {
+    position: absolute;
+    padding: 70px 50px;
+    background-color: #EDC2C0;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: 840px;
+    height: 100%;
+    -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+  }
+  html body section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #474747;
+  }
 }
 
-html body {
-  font-size: 1.6rem;
+@media (max-width: 1000px) {
+  html {
+    font-size: 93.75%;
+  }
+  html body {
+    font-size: 1rem;
+  }
+  html body section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #112d42;
+  }
+  html body section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 614px;
+    z-index: 2;
+    border: 3px solid tomato;
+  }
+  html body section .container .contactinfo {
+    padding: 40px;
+    background-color: #0f3959;
+  }
+  html body section .container .contactinfo h2 {
+    color: white;
+  }
+  html body section .container .contactForm {
+    background-color: #fff;
+    padding: 40px;
+    width: 600px;
+    height: 100%;
+    -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+  }
+  html body section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #03a9f4;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+  html body {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
