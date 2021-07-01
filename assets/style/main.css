@@ -11,6 +11,8 @@
   }
   html body {
     font-size: 1.6rem;
+    /* ===== GitHub Corners ============================== */
+    /* ===== Average ============================== */
   }
   html body section {
     font-family: 'Marko One', serif;
@@ -189,7 +191,7 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  html body section .container .contactinfo .containerIcon ul li > a {
+  html body section .container .contactinfo .containerIcon ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -200,6 +202,16 @@
     font-size: 5rem;
     color: black;
     text-decoration: none;
+    width: 5rem;
+  }
+  html body section .container .contactinfo .containerIcon ul li a img {
+    width: 100%;
+  }
+  html body section .container .contactinfo .containerIcon ul li a:hover:nth-child(1) {
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotateZ(-30deg);
+            transform: rotateZ(-30deg);
   }
   html body section .container .contactForm {
     position: absolute;
@@ -221,8 +233,58 @@
     height: 100%;
     background-color: #474747;
   }
+  html body .github-corner:hover .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+  }
+  @-webkit-keyframes octocat-wave {
+    0%,
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    20%,
+    60% {
+      -webkit-transform: rotate(-25deg);
+              transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+  }
+  @keyframes octocat-wave {
+    0%,
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    20%,
+    60% {
+      -webkit-transform: rotate(-25deg);
+              transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+  }
 }
 
+@media (min-width: 1000px) and (max-width: 500px) {
+  html body .github-corner:hover .octo-arm {
+    -webkit-animation: none;
+            animation: none;
+  }
+  html body .github-corner .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+/* ===== Average ============================== */
 @media (max-width: 1000px) {
   html {
     font-size: 93.75%;
