@@ -165,13 +165,13 @@
                                         color: black;
                                         text-decoration: none;
                                         width: 5rem;
+                                        transition: .3s ease-in-out;
 
                                         img {
                                             width: 100%;
                                         }
 
-                                        &:hover:nth-child(1) {
-                                            transition: .5s;
+                                        &:hover {
                                             transform: rotateZ(-30deg);
                                         }
                                     }
@@ -181,6 +181,7 @@
                     }
 
                     .contactForm {
+
                         position: absolute;
                         padding: 70px 50px;
                         background-color: #EDC2C0;
@@ -189,6 +190,45 @@
                         width: 840px;
                         height: 100%;
                         box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+
+                        h2 {
+                            font-size: 3rem;
+                            font-weight: 900;
+                            text-align: center;
+                        }
+
+                        input {
+                            font-family: 'Marko One', serif;
+                            text-align: center;
+                            outline: none;
+                            padding: 5px;
+                            width: 30rem;
+                            border: 2px solid #2EB99C;
+                            border-radius: 5px;
+                            margin: 1rem 0rem;
+
+                        }
+
+                        input:nth-child(2) {
+                            width: 10rem;
+                        }
+
+                        .ImgReset {
+                            width: 5rem;
+                            display: block;
+                            margin: 0 0 0 auto;
+                            cursor: pointer;
+                            transform: rotate(100deg);
+                            transition: .5s ease-in-out;
+
+                            &:hover {
+                                transform: rotateZ(-10deg);
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }

@@ -203,13 +203,13 @@
     color: black;
     text-decoration: none;
     width: 5rem;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
   html body section .container .contactinfo .containerIcon ul li a img {
     width: 100%;
   }
-  html body section .container .contactinfo .containerIcon ul li a:hover:nth-child(1) {
-    -webkit-transition: .5s;
-    transition: .5s;
+  html body section .container .contactinfo .containerIcon ul li a:hover {
     -webkit-transform: rotateZ(-30deg);
             transform: rotateZ(-30deg);
   }
@@ -223,6 +223,41 @@
     height: 100%;
     -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
             box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+  }
+  html body section .container .contactForm h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  html body section .container .contactForm input {
+    font-family: 'Marko One', serif;
+    text-align: center;
+    outline: none;
+    padding: 5px;
+    width: 30rem;
+    border: 2px solid #2EB99C;
+    border-radius: 5px;
+    margin: 1rem 0rem;
+  }
+  html body section .container .contactForm input:nth-child(2) {
+    width: 10rem;
+  }
+  html body section .container .contactForm .ImgReset {
+    width: 5rem;
+    display: block;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  html body section .container .contactForm .ImgReset:hover {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  html body section .container .contactForm .ImgReset img {
+    width: 100%;
   }
   html body section::before {
     content: '';
