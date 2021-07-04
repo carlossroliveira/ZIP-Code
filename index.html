@@ -21,14 +21,13 @@
 
 
 <body>
-
     <section>
         <div class="container">
             <div class="contactinfo">
                 <div class="containerCep">
                     <h1>CEP</h1>
-                    <input type="text" autocomplete="off" autofocus>
-                    <button type="submit" class="button">Enviar</button>
+                    <input data-cep type="text" autocomplete="off" autofocus>
+                    <button data-btn type="submit" class="button">Enviar</button>
                 </div>
                 <div class="containerIcon">
                     <ul>
@@ -53,24 +52,24 @@
                 <h2 class="title">Informações</h2>
                 <div>
                     <div>
-                        <input type="text" autocomplete="off" placeholder="UF">
+                        <input data-uf type="text" autocomplete="off" placeholder="UF">
                     </div>
                     <div>
-                        <input type="text" autocomplete="off" placeholder="Logradouro">
+                        <input data-logradouro type="text" autocomplete="off" placeholder="Logradouro">
                     </div>
                     <div>
-                        <input type="text" autocomplete="off" placeholder="Complemento">
+                        <input data-complemento type="text" autocomplete="off" placeholder="Complemento">
                     </div>
                     <div>
-                        <input type="text" autocomplete="off" placeholder="Localidade">
-                        <input type="text" autocomplete="off" placeholder="DDD">
+                        <input data-localidade type="text" autocomplete="off" placeholder="Localidade">
+                        <input data-DDD type="text" autocomplete="off" placeholder="DDD">
                     </div>
                     <div>
-                        <input type="text" autocomplete="off" placeholder="Bairro">
+                        <input data-bairro type="text" autocomplete="off" placeholder="Bairro">
                     </div>
 
                 </div>
-                <div class="ImgReset">
+                <div data-reset class="ImgReset">
                     <img src="assets/img/circular-arrow.png" alt="reset">
                 </div>
             </div>
@@ -94,7 +93,7 @@
 
 
     <!-- JavaScript Start -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>

@@ -15,6 +15,14 @@ html body {
   /* ===== Average ============================== */
 }
 
+html body .error {
+  background-color: tomato;
+}
+
+html body .swal2-popup {
+  font-size: 14px;
+}
+
 html body section {
   font-family: 'Marko One', serif;
   position: relative;

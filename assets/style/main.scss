@@ -12,6 +12,16 @@ html {
     body {
         font-size: 1.6rem; // Tamanho da fonte 16px
 
+
+
+        .error {
+            background-color: tomato;
+        }
+
+        .swal2-popup {
+            font-size: 14px;
+        }
+
         section {
             font-family: 'Marko One', serif;
             position: relative;
