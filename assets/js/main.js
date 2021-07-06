@@ -2,6 +2,7 @@
   const buttton = document.querySelector("[data-btn]");
   const reset = document.querySelector("[data-reset]");
   const inputCep = document.querySelector("[data-cep]");
+  const spinner = document.querySelector("[data-spinner]");
 
   const uf = document.querySelector("[data-uf]");
   const logradouro = document.querySelector("[data-logradouro]");
@@ -13,8 +14,17 @@
   const handleZipCode = (event) => {
     event.preventDefault();
     const cep = inputCep.value;
-    zipCodeSearch(cep);
+    setTimeout(
+      () => [zipCodeSearch(cep), removeSpinner("sk-folding-cube")], 2600);
     validateZipCode(cep);
+  };
+
+  const createSpinner = () => {
+    spinner.classList.add("sk-folding-cube");
+  };
+
+  const removeSpinner = () => {
+    spinner.classList.remove("sk-folding-cube");
   };
 
   const clearZipCode = () => {
@@ -27,20 +37,21 @@
     uf.value = "";
     inputCep.focus();
     removeClassError();
+    removeSpinner("sk-folding-cube");
   };
 
-  function removeClassError() {
+  const removeClassError = () => {
     complemento.classList.remove("error");
     logradouro.classList.remove("error");
     localidade.classList.remove("error");
     bairro.classList.remove("error");
     DDD.classList.remove("error");
     uf.classList.remove("error");
-  }
+  };
 
   const validateZipCode = (cep) => {
     if (cep.length === 8) {
-      console.log("okay");
+      createSpinner("sk-folding-cube");
     } else {
       Swal.fire({
         icon: "error",

@@ -21,8 +21,15 @@
 
 
 <body>
+
     <section>
         <div class="container">
+            <div data-spinner>
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
             <div class="contactinfo">
                 <div class="containerCep">
                     <h1>CEP</h1>
@@ -47,25 +54,24 @@
                 </div>
             </div>
 
-
             <div class="contactForm">
                 <h2 class="title">Informações</h2>
                 <div>
                     <div>
-                        <input data-uf type="text" autocomplete="off" placeholder="UF">
+                        <input data-uf type="text" autocomplete="off" placeholder="UF" disabled>
                     </div>
                     <div>
-                        <input data-logradouro type="text" autocomplete="off" placeholder="Logradouro">
+                        <input data-logradouro type="text" autocomplete="off" placeholder="Logradouro" disabled>
                     </div>
                     <div>
-                        <input data-complemento type="text" autocomplete="off" placeholder="Complemento">
+                        <input data-complemento type="text" autocomplete="off" placeholder="Complemento" disabled>
                     </div>
                     <div>
-                        <input data-localidade type="text" autocomplete="off" placeholder="Localidade">
-                        <input data-DDD type="text" autocomplete="off" placeholder="DDD">
+                        <input data-localidade type="text" autocomplete="off" placeholder="Localidade" disabled>
+                        <input data-DDD type="text" autocomplete="off" placeholder="DDD" disabled>
                     </div>
                     <div>
-                        <input data-bairro type="text" autocomplete="off" placeholder="Bairro">
+                        <input data-bairro type="text" autocomplete="off" placeholder="Bairro" disabled>
                     </div>
 
                 </div>
@@ -73,8 +79,6 @@
                     <img src="assets/img/circular-arrow.png" alt="reset">
                 </div>
             </div>
-
-
         </div>
     </section>
 
@@ -96,4 +100,5 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
