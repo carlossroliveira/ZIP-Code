@@ -1,11 +1,11 @@
 <h1 align="center"> 🏴󠁧󠁢󠁥󠁮󠁧󠁿 CEP - Project </h1>
 
 ---
-
+![gif](https://user-images.githubusercontent.com/63623377/124982918-ae654080-e00d-11eb-8921-3a2e8899c18a.gif)
 
 ---
 
-## Calculator
+## CEP / API
 
 Cosumindo dados da API ViaCEP para consulta informações de endereços fornecendo apenas o CEP
 
