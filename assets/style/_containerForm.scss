@@ -1,0 +1,64 @@
+@import '_vaviablesAndMixin';
+
+html {
+    body {
+        section {
+            .container {
+
+                /* ===== Container Form ============================== */
+                .contactForm {
+                    position: absolute;
+                    padding: 70px 50px;
+                    background-color: $color-background-main;
+                    margin-left: 150px;
+                    padding-left: 250px;
+                    width: 840px;
+                    height: 100%;
+                    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+
+                    .title {
+                        font-size: 3rem;
+                        font-weight: 900;
+                        color: $color-and-background;
+                        text-align: center;
+                    }
+
+                    input {
+                        @include fontFamily;
+                        text-align: center;
+                        outline: none;
+                        padding: 5px;
+                        width: 30rem;
+                        border: 2px solid $base-color-btn;
+                        border-radius: 5px;
+                        margin: 1rem 0rem;
+                        color: $color-and-background;
+                        font-weight: 900;
+                    }
+
+                    input:nth-child(2) {
+                        width: 10rem;
+                    }
+
+                    .ImgReset {
+                        width: 5rem;
+                        display: block;
+                        margin: 0 0 0 auto;
+                        cursor: pointer;
+                        transform: rotate(100deg);
+                        transition: .5s ease-in-out;
+
+                        &:hover {
+                            transform: rotateZ(-10deg);
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

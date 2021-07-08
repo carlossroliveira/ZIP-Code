@@ -1,0 +1,31 @@
+/* ===== Color ============================== */
+$color-and-background: #474747;
+$color-background-main: #EDC2C0;
+$base-bgc-hover: #00ffcba3;
+$base-color-btn: #2EB99C;
+$base-border: #00FFCB;
+$base-error: #ff6347;
+
+
+/* ===== Mixin ============================== */
+@mixin fontFamily {
+    font-family: 'Marko One', serif;
+}
+
+@mixin positionFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btn {
+    color: $color-and-background;
+    background-color: $base-color-btn;
+    background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+    box-shadow: 12px 12px 24px #4fd1c5a3;
+    border: 1px solid $base-border;
+    border-radius: 5px;
+    font-weight: 900;
+    outline: none;
+    transition: all 0.3s ease-in-out 0s;
+}

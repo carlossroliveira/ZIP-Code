@@ -1,0 +1,25 @@
+@import '_vaviablesAndMixin';
+
+html {
+    body {
+        section {
+            .container {
+                .contactinfo {
+                    .containerCep {
+
+                        /* ===== Input ============================== */
+                        input {
+                            @include btn;
+                            margin: 1rem 0rem;
+                            padding: 5px;
+
+                            &:hover {
+                                box-shadow: 0 0 60px $base-bgc-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

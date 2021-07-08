@@ -13,9 +13,12 @@
 
   const handleZipCode = (event) => {
     event.preventDefault();
+
     const cep = inputCep.value;
     setTimeout(
-      () => [zipCodeSearch(cep), removeSpinner("sk-folding-cube")], 2600);
+      () => [zipCodeSearch(cep), removeSpinner("sk-folding-cube")],
+      2600
+    );
     validateZipCode(cep);
   };
 
@@ -50,15 +53,27 @@
   };
 
   const validateZipCode = (cep) => {
-    if (cep.length === 8) {
-      createSpinner("sk-folding-cube");
-    } else {
-      Swal.fire({
+    const hasCepEight = cep.length === 8;
+    const hasCepZero = cep.length === 0;
+
+    if (hasCepZero) {
+      inputCep.focus();
+      return Swal.fire({
         icon: "error",
-        title: "CEP  inválido",
+        title: "Insira um CEP",
       });
-      inputCep.value = "";
     }
+
+    if (!hasCepEight) {
+      inputCep.focus();
+      inputCep.value = "";
+      return Swal.fire({
+        icon: "error",
+        title: "CEP inválido",
+      });
+    }
+
+    createSpinner("sk-folding-cube");
   };
 
   async function zipCodeSearch(cep) {

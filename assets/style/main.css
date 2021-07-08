@@ -1,3 +1,4 @@
+/* ===== Configuration initial ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -5,78 +6,82 @@
           box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+/* ===== Imports initial ============================== */
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html body {
+  /* ===== Background ============================== */
+}
+
+html body section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #474747;
 }
 
 html body {
-  font-size: 1.6rem;
   /* ===== GitHub Corners ============================== */
   /* ===== Average ============================== */
 }
 
-html body .error {
-  background-color: tomato;
+html body .github-corner:hover .octo-arm {
+  -webkit-animation: octocat-wave 560ms ease-in-out;
+          animation: octocat-wave 560ms ease-in-out;
 }
 
-html body .swal2-popup {
-  font-size: 14px;
+@-webkit-keyframes octocat-wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
 }
 
-html body section {
-  font-family: 'Marko One', serif;
-  position: relative;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2EB99C;
+@keyframes octocat-wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
 }
 
-html body section .container {
-  position: relative;
-  min-width: 1000px;
-  min-height: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 2;
-  /* ===== Spinner ============================== */
+@media (max-width: 500px) {
+  html body .github-corner:hover .octo-arm {
+    -webkit-animation: none;
+            animation: none;
+  }
+  html body .github-corner .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+  }
 }
 
-html body section .container .contactinfo {
-  position: absolute;
-  z-index: 1;
-  top: 40px;
-  width: 350px;
-  padding: 40px;
-  height: calc(100% - 80px);
-  background-color: #2EB99C;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-}
-
-html body section .container .contactinfo h1 {
-  color: #474747;
-  font-weight: 900;
-}
-
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
 html body section .container .contactinfo .containerCep {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,46 +96,33 @@ html body section .container .contactinfo .containerCep {
   /* ===== Button ============================== */
 }
 
-html body section .container .contactinfo .containerCep input {
-  margin: 1rem 0rem;
-  padding: 5px;
-  border: none;
-  outline: none;
-  color: #474747;
-  font-weight: 900;
-  border-radius: 5px;
-  background: #2EB99C;
-  background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
-  background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
-  border: 1px solid #00FFCB;
-}
-
-html body section .container .contactinfo .containerCep input:hover {
-  -webkit-box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-          box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-}
-
 html body section .container .contactinfo .containerCep .button {
   font-family: 'Marko One', serif;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
-  color: #474747;
-  font-weight: 900;
-  background: #2EB99C;
-  background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
-  background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
-  border: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 12px 12px 24px #4fd1c5a3;
-          box-shadow: 12px 12px 24px #4fd1c5a3;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  outline: none;
   position: relative;
   padding: 10px;
   margin-top: 5rem;
+  color: #474747;
+  background-color: #2EB99C;
+  background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
+  background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+  -webkit-box-shadow: 12px 12px 24px #4fd1c5a3;
+          box-shadow: 12px 12px 24px #4fd1c5a3;
+  border: 1px solid #00FFCB;
+  border-radius: 5px;
+  font-weight: 900;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+html body section .container .contactinfo .containerCep .button:hover, html body section .container .contactinfo .containerCep .button:focus {
+  color: #474747;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 html body section .container .contactinfo .containerCep button::before {
@@ -139,8 +131,8 @@ html body section .container .contactinfo .containerCep button::before {
   min-width: calc(270px + 12px);
   min-height: calc(50px + 12px);
   border: 6px solid #00FFCB;
-  -webkit-box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-          box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  -webkit-box-shadow: 0 0 60px #00ffcba3;
+          box-shadow: 0 0 60px #00ffcba3;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -149,13 +141,6 @@ html body section .container .contactinfo .containerCep button::before {
   opacity: 0;
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
-}
-
-html body section .container .contactinfo .containerCep .button:hover,
-html body section .container .contactinfo .containerCep .button:focus {
-  color: #313133;
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
 }
 
 html body section .container .contactinfo .containerCep button:hover::before,
@@ -212,39 +197,10 @@ html body section .container .contactinfo .containerCep button:focus::after {
   }
 }
 
-html body section .container .contactinfo .containerIcon ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-html body section .container .contactinfo .containerIcon ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 5rem;
-  color: #474747;
-  font-weight: 900;
-  text-decoration: none;
-  width: 5rem;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-html body section .container .contactinfo .containerIcon ul li a img {
-  width: 100%;
-}
-
-html body section .container .contactinfo .containerIcon ul li a:hover {
-  -webkit-transform: rotateZ(-30deg);
-          transform: rotateZ(-30deg);
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html body section .container {
+  /* ===== Container Form ============================== */
 }
 
 html body section .container .contactForm {
@@ -303,6 +259,84 @@ html body section .container .contactForm .ImgReset img {
   width: 100%;
 }
 
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 1.6rem;
+  /* ===== Erros e Alertas ============================== */
+}
+
+html body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: #2EB99C;
+}
+
+html body section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-width: 100rem;
+  min-height: 45rem;
+  z-index: 2;
+}
+
+html body section .container .contactinfo {
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
+  width: 35rem;
+  padding: 4rem;
+  height: calc(100% - 80px);
+  background-color: #2EB99C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 2rem 2rem #00000033;
+          box-shadow: 0 2rem 2rem #00000033;
+  /* ===== Title ============================== */
+}
+
+html body section .container .contactinfo h1 {
+  color: #474747;
+  font-weight: 900;
+}
+
+html body .error {
+  background-color: #ff6347;
+}
+
+html body .swal2-popup {
+  font-size: 1.4rem;
+}
+
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html body section .container {
+  /* ===== Cube Spinner ============================== */
+}
+
 html body section .container .sk-folding-cube {
   z-index: 1;
   margin: 4rem 40rem 0;
@@ -310,7 +344,7 @@ html body section .container .sk-folding-cube {
   height: 40px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 html body section .container .sk-folding-cube .sk-cube {
@@ -319,7 +353,7 @@ html body section .container .sk-folding-cube .sk-cube {
   height: 50%;
   position: relative;
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 html body section .container .sk-folding-cube .sk-cube:before {
@@ -331,58 +365,58 @@ html body section .container .sk-folding-cube .sk-cube:before {
   height: 100%;
   background-color: #474747;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-  animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 html body section .container .sk-folding-cube .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
-  transform: scale(1.1) rotateZ(90deg);
-}
-
-html body section .container .sk-folding-cube .sk-cube3 {
-  -webkit-transform: scale(1.1) rotateZ(180deg);
-  transform: scale(1.1) rotateZ(180deg);
-}
-
-html body section .container .sk-folding-cube .sk-cube4 {
-  -webkit-transform: scale(1.1) rotateZ(270deg);
-  transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(90deg);
 }
 
 html body section .container .sk-folding-cube .sk-cube2:before {
   -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+html body section .container .sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
 }
 
 html body section .container .sk-folding-cube .sk-cube3:before {
   -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+html body section .container .sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
 }
 
 html body section .container .sk-folding-cube .sk-cube4:before {
   -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 @-webkit-keyframes sk-foldCubeAngle {
   0%,
   10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-    transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25%,
   75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-    transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90%,
   100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-    transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
 }
@@ -391,85 +425,94 @@ html body section .container .sk-folding-cube .sk-cube4:before {
   0%,
   10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-    transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25%,
   75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-    transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90%,
   100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-    transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
 }
 
-html body section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #474747;
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html body section .container .contactinfo {
+  /* ===== Icons ============================== */
 }
 
-html body .github-corner:hover .octo-arm {
-  -webkit-animation: octocat-wave 560ms ease-in-out;
-          animation: octocat-wave 560ms ease-in-out;
+html body section .container .contactinfo .containerIcon ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-@-webkit-keyframes octocat-wave {
-  0%,
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  20%,
-  60% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
-  }
-  40%,
-  80% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
+html body section .container .contactinfo .containerIcon ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 5rem;
+  color: #474747;
+  font-weight: 900;
+  text-decoration: none;
+  width: 5rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
-@keyframes octocat-wave {
-  0%,
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  20%,
-  60% {
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
-  }
-  40%,
-  80% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
+html body section .container .contactinfo .containerIcon ul li a img {
+  width: 100%;
 }
 
-@media (max-width: 500px) {
-  html body .github-corner:hover .octo-arm {
-    -webkit-animation: none;
-            animation: none;
-  }
-  html body .github-corner .octo-arm {
-    -webkit-animation: octocat-wave 560ms ease-in-out;
-            animation: octocat-wave 560ms ease-in-out;
-  }
+html body section .container .contactinfo .containerIcon ul li a:hover {
+  -webkit-transform: rotateZ(-30deg);
+          transform: rotateZ(-30deg);
 }
 
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
+html body section .container .contactinfo .containerCep {
+  /* ===== Input ============================== */
+}
+
+html body section .container .contactinfo .containerCep input {
+  color: #474747;
+  background-color: #2EB99C;
+  background: -webkit-gradient(linear, left top, right top, from(#81e6d9), to(#4fd1c5));
+  background: linear-gradient(90deg, #81e6d9 0%, #4fd1c5 100%);
+  -webkit-box-shadow: 12px 12px 24px #4fd1c5a3;
+          box-shadow: 12px 12px 24px #4fd1c5a3;
+  border: 1px solid #00FFCB;
+  border-radius: 5px;
+  font-weight: 900;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  margin: 1rem 0rem;
+  padding: 5px;
+}
+
+html body section .container .contactinfo .containerCep input:hover {
+  -webkit-box-shadow: 0 0 60px #00ffcba3;
+          box-shadow: 0 0 60px #00ffcba3;
+}
+
+/* ===== Color ============================== */
+/* ===== Mixin ============================== */
 /* ===== Average ============================== */
 @media (max-width: 1000px) {
   html {
@@ -483,18 +526,37 @@ html body .github-corner:hover .octo-arm {
     display: inline-block;
   }
   html body section .container {
+    min-width: 50rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  html body section .container .sk-folding-cube {
+    display: none;
+  }
+  html body section .container .sk-folding-cube .sk-cube {
+    display: none;
+  }
   html body section .container .contactinfo {
     position: initial;
     width: 80%;
     margin: 0 auto;
+  }
+  html body section .container .contactinfo .containerCep {
+    /* ===== Button ============================== */
+  }
+  html body section .container .contactinfo .containerCep button::before {
+    display: none;
+  }
+  html body section .container .contactinfo .containerCep button::after {
+    display: none;
   }
   html body section .container .contactinfo .containerIcon ul li a {
     margin-top: 2rem;
@@ -524,9 +586,9 @@ html body .github-corner:hover .octo-arm {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   html {
-    font-size: 87.5%;
+    font-size: 75.5%;
   }
   html body {
     font-size: 1rem;
@@ -534,8 +596,23 @@ html body .github-corner:hover .octo-arm {
   html body section .container {
     min-width: 40rem;
   }
+  html body section .container .sk-folding-cube {
+    display: none;
+  }
+  html body section .container .sk-folding-cube .sk-cube {
+    display: none;
+  }
   html body section .container .contactinfo {
     width: 100%;
+  }
+  html body section .container .contactinfo .containerCep {
+    /* ===== Button ============================== */
+  }
+  html body section .container .contactinfo .containerCep button::before {
+    display: none;
+  }
+  html body section .container .contactinfo .containerCep button::after {
+    display: none;
   }
   html body section .container .contactForm {
     width: 100%;

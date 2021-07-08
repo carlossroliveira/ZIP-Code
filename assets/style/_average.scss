@@ -1,0 +1,139 @@
+@import '_vaviablesAndMixin';
+
+/* ===== Average ============================== */
+@media(max-width: 1000px) {
+    html {
+        font-size: 93.75%;
+
+        body {
+
+            font-size: 1rem; // Tamanho da fonte 15px
+
+            section {
+                position: inherit;
+                display: inline-block;
+
+                .container {
+                    min-width: 50rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .sk-folding-cube {
+                        display: none;
+
+                        .sk-cube {
+                            display: none;
+                        }
+                    }
+
+                    .contactinfo {
+                        position: initial;
+                        width: 80%;
+                        margin: 0 auto;
+
+                        .containerCep {
+
+                            /* ===== Button ============================== */
+                            button::before {
+                                display: none;
+                            }
+
+                            button::after {
+                                display: none;
+                            }
+                        }
+
+                        .containerIcon {
+                            ul {
+                                li {
+                                    a {
+                                        margin-top: 2rem;
+                                        width: 3rem;
+
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contactForm {
+                        position: initial;
+                        padding: 3rem;
+                        width: 80%;
+                        margin: 0 auto;
+
+                        .title {
+                            font-size: 2rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        div {
+                            text-align: center;
+                        }
+
+                        input:nth-child(2) {
+                            width: 30rem;
+                        }
+
+                        .ImgReset {
+                            width: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 768px) {
+    html {
+        font-size: 75.5%;
+
+        body {
+            font-size: 1rem; // Tamanho da fonte 14px
+
+            section {
+                .container {
+                    min-width: 40rem;
+
+                    .sk-folding-cube {
+                        display: none;
+
+                        .sk-cube {
+                            display: none;
+                        }
+                    }
+
+                    .contactinfo {
+                        width: 100%;
+
+                        .containerCep {
+
+                            /* ===== Button ============================== */
+                            button::before {
+                                display: none;
+                            }
+
+                            button::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .contactForm {
+                        width: 100%;
+
+                        .ImgReset {
+                            width: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

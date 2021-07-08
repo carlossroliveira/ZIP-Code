@@ -1,0 +1,56 @@
+@import '_vaviablesAndMixin';
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size: 1.6rem; // Tamanho da fonte 16px
+
+        section {
+            @include positionFlex;
+
+            position: relative;
+            min-height: 100vh;
+            background-color: $base-color-btn;
+
+            .container {
+                display: flex;
+                position: relative;
+                min-width: 100rem;
+                min-height: 45rem;
+                z-index: 2;
+
+                .contactinfo {
+                    position: absolute;
+                    z-index: 1;
+
+                    top: 4rem;
+                    width: 35rem;
+                    padding: 4rem;
+                    height: calc(100% - 80px);
+                    background-color: $base-color-btn;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2rem 2rem #00000033;
+
+                    /* ===== Title ============================== */
+                    h1 {
+                        color: $color-and-background;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        /* ===== Erros e Alertas ============================== */
+        .error {
+            background-color: $base-error;
+        }
+
+        .swal2-popup {
+            font-size: 1.4rem;
+        }
+    }
+}

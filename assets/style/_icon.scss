@@ -1,0 +1,42 @@
+@import '_vaviablesAndMixin';
+
+html {
+    body {
+        section {
+            .container {
+                .contactinfo {
+
+                    /* ===== Icons ============================== */
+                    .containerIcon {
+                        ul {
+                            display: flex;
+                            list-style: none;
+                            justify-content: space-around;
+
+                            li {
+                                a {
+                                    display: flex;
+                                    flex-direction: row;
+                                    font-size: 5rem;
+                                    color: $color-and-background;
+                                    font-weight: 900;
+                                    text-decoration: none;
+                                    width: 5rem;
+                                    transition: .3s ease-in-out;
+
+                                    img {
+                                        width: 100%;
+                                    }
+
+                                    &:hover {
+                                        transform: rotateZ(-30deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
