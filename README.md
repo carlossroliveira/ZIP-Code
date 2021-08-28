@@ -7,7 +7,7 @@
 
 ## CEP / API
 
-Cosumindo dados da API ViaCEP para consulta informações de endereços fornecendo apenas o CEP
+Consumindo dados da API ViaCEP para consulta informações de endereços fornecendo apenas o CEP
 
 ## ♟️ Techs
 
